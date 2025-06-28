@@ -229,15 +229,13 @@ export const taxRules: TaxRules = {
   Bulgaria: {
     Employee: bulgariaEmployee,
     'Self-Employed': (income, expenses = 0, _salaryPayments = 12) => {
-      // Placeholder: flat 15% tax on (income - expenses)
       const taxable = income - expenses;
       const tax = taxable * 0.15;
       const net = taxable * 0.85;
-      const entireExpense = income; // No employer contributions in placeholder
+      const entireExpense = income;
       return { tax, net, entireExpense, breakdown: { 'Flat Tax': tax, 'Net': net, 'Entire Expense': entireExpense } };
     },
     'Small Business': (income, expenses = 0, _salaryPayments = 12) => {
-      // Placeholder: flat 12% tax on (income - expenses)
       const taxable = income - expenses;
       const tax = taxable * 0.12;
       const net = taxable * 0.88;
@@ -248,7 +246,6 @@ export const taxRules: TaxRules = {
   Estonia: {
     Employee: estoniaEmployee,
     'Self-Employed': (income, expenses = 0, _salaryPayments = 12) => {
-      // Placeholder: flat 25% tax on (income - expenses)
       const taxable = income - expenses;
       const tax = taxable * 0.25;
       const net = taxable * 0.75;
@@ -256,7 +253,6 @@ export const taxRules: TaxRules = {
       return { tax, net, entireExpense, breakdown: { 'Flat Tax': tax, 'Net': net, 'Entire Expense': entireExpense } };
     },
     'Small Business': (income, expenses = 0, _salaryPayments = 12) => {
-      // Placeholder: flat 20% tax on (income - expenses)
       const taxable = income - expenses;
       const tax = taxable * 0.2;
       const net = taxable * 0.8;
@@ -267,7 +263,6 @@ export const taxRules: TaxRules = {
   Greece: {
     Employee: greeceEmployee,
     'Self-Employed': (income, expenses = 0, _salaryPayments = 14) => {
-      // Placeholder: flat 26% tax on (income - expenses)
       const taxable = income - expenses;
       const tax = taxable * 0.26;
       const net = taxable * 0.74;
@@ -275,7 +270,6 @@ export const taxRules: TaxRules = {
       return { tax, net, entireExpense, breakdown: { 'Flat Tax': tax, 'Net': net, 'Entire Expense': entireExpense } };
     },
     'Small Business': (income, expenses = 0, _salaryPayments = 14) => {
-      // Placeholder: flat 24% tax on (income - expenses)
       const taxable = income - expenses;
       const tax = taxable * 0.24;
       const net = taxable * 0.76;
