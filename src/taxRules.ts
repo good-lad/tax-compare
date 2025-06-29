@@ -11,7 +11,7 @@ type TaxBreakdown = {
   breakdown: Record<string, number>;
 };
 
-type TaxCalc = (income: number, expenses?: number, salaryPayments?: number) => TaxBreakdown;
+type TaxCalc = (income: number, expenses?: number, _salaryPayments?: number) => TaxBreakdown;
 
 type TaxRules = {
   [country in Country]: {
