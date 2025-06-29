@@ -252,7 +252,7 @@ export function findGreeceGrossForNet(net: number, salaryPayments: number): numb
     net * 2
   );
 }
-export function findGreeceGrossForEntireExpense(entire: number, salaryPayments: number): number {
+export function findGreeceGrossForEntireExpense(entire: number, _salaryPayments: number): number {
   return entire / 1.2229;
 }
 
